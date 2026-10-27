@@ -39,7 +39,7 @@ npm run preview
 
 ## GitHubと計画運用
 
-リポジトリ名は `onidora-homepage` を想定。GitHubの新規作成・pushは、ローカル実装と検証の提示後にユーザー確認を取ります。公開コードの登録とWebサイトの公開は別の操作です。
+リポジトリは [onidora/onidora-homepage](https://github.com/onidora/onidora-homepage)（private）。2026-10-27のユーザー承認に基づき、mainへ初期構築をpush済みです。GitHubへのコード登録とWebサイトの公開は別の操作です。以降のpushはAGENTS.mdの承認ルールに従います。
 
 - 共通ルール: [AGENTS.md](AGENTS.md)
 - 計画スキル: [.agents/skills/plan-authoring/SKILL.md](.agents/skills/plan-authoring/SKILL.md)
