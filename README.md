@@ -1,9 +1,3 @@
-# おにどら | WORKS
-
-個人ゲーム開発者「おにどら」のポートフォリオ。StudioActOne（全年齢向け）とうらどらスタジオ（18歳以上対象）を独立したブランドとして紹介します。
-
-初回はトップページだけを実装しています。Astroのソースは `src/pages/index.astro`、生成HTMLは `dist/index.html` です。ブランド詳細は準備中で、後続作業は [plan](plan/README.md) にまとめています。GitHub Pages・Actions・ホスティング設定は今回の範囲に含めていません。
-
 ## 開発環境とローカル起動
 
 - Node.js 24.22.1推奨（Volta利用時はpackage.jsonの指定が適用されます）。Astro 7.4.2の要件はNode.js 22.23.4以上です。
