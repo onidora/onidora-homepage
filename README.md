@@ -26,8 +26,16 @@ npm run preview
 - X、Steam、Ci-enはユーザー指定のURLを設定済みです。ブランドの外部リンクは `externalLink` の `url`・`label` で変更します。成人向けリンクには `notice` で注意書きを設定します。
 - ブランド詳細ページは未作成です。現在のブランドカードからはSteam・Ci-enへ移動できます。詳細ページを追加・検証したときに `detailPath` を設定します。
 - 今回の作品名はブランド情報に含まれます。後続02・03で小さな作品配列を導入し、ページ構造の編集を減らします。
-- 仮アイコンはこのプロジェクトで作ったSVGです。実際のアイコンは使用許可済みファイルを `public/images/` に置き、`iconPath` と `src/pages/index.astro` のaltを更新します。パスは `images/avatar.webp` のように先頭 `/` を付けません。
-- ゲームヘッダーは後続workで追加します。既存プロジェクトから素材を無断で流用しません。
+- アイコン・ブランドロゴ・紹介画像は `public/images/` に置き、`iconPath`・`logoPath`・`artwork` で設定します。パスは `images/avatar.webp` のように先頭 `/` を付けません。画像の内容が変わるときはaltも更新します。
+- 2026-10-30のデザイン更新では、ユーザー指定のDownloads画像4点をWebPへ軽量化して使用しています。元画像は変更していません。うらどらの画像はブランドヘッダーとして使用し、UradoraSurvivorsのゲーム画像とは扱いません。
+
+| 提供ファイル | ローカル案の素材 | 用途 |
+| --- | --- | --- |
+| ondr6.jpg | onidora-avatar.webp | おにどらのアイコン |
+| logo_circle_2w.png | studioactone-logo.webp | StudioActOneロゴ |
+| store_capsule_main.png | codereactors-main.webp | CodeReactorsメインビジュアル |
+| header.png | uradora-brand.webp | うらどらスタジオのブランドヘッダー |
+
 - スタイルは `src/styles/global.css`。外部フォントやクライアントJavaScriptを使わない軽量な構成です。
 - 変更後はcheck/buildとPC・スマートフォン幅、画像、リンクを確認します。
 
