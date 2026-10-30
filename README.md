@@ -5,7 +5,7 @@
 - TypeScriptはチェックツールの対応範囲に合わせて5.9系。依存の再現にはlockfileと `npm ci` を使います。
 
 ```powershell
-cd C:\GameDev\onidora-homepage
+cd C:\WebDev\onidora-homepage
 npm ci
 npm run dev
 ```
