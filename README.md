@@ -33,7 +33,7 @@ npm run preview
 
 ## GitHubと計画運用
 
-リポジトリは [onidora/onidora-homepage](https://github.com/onidora/onidora-homepage)（private）。2026-10-27のユーザー承認に基づき、mainへ初期構築をpush済みです。GitHubへのコード登録とWebサイトの公開は別の操作です。以降のpushはAGENTS.mdの承認ルールに従います。
+リポジトリは [onidora/onidora-homepage](https://github.com/onidora/onidora-homepage)。2026-10-30のユーザー指示に基づき、無料のGitHub Pagesを使うためpublicに変更済みです。コード・履歴・計画文書も公開対象です。以降のpushはAGENTS.mdの承認ルールに従います。
 
 - 共通ルール: [AGENTS.md](AGENTS.md)
 - 計画スキル: [.agents/skills/plan-authoring/SKILL.md](.agents/skills/plan-authoring/SKILL.md)
@@ -44,7 +44,25 @@ npm run preview
 
 ## GitHub Pagesへの公開
 
-現在は未設定です。実行手順・Actionsワークフローはまだ用意していません。[05-GitHub-Pages公開](plan/work/2026-10-27-05-GitHub-Pages公開.md) で、公開先の確定、site/base設定、Actions、ローカル検証、公開許可、初回デプロイを扱います。作業時点の公式手順を確認し、READMEへ確定手順を追記します。
+トップ1ページをテスト公開するため、`.github/workflows/deploy.yml` を用意しています。公開予定URLは `https://onidora.github.io/onidora-homepage/`。初回公開の結果は [05-GitHub-Pages公開](plan/work/2026-10-27-05-GitHub-Pages公開.md) の実施記録に残します。
+
+1. GitHubのSettings → PagesでSourceを **GitHub Actions** に設定します。現在のアカウントはprivateリポジトリからのPages公開が利用できないため、publicリポジトリから一般公開する構成です。
+2. `main` へサイトのソースや公開設定をpushすると、型チェック・ビルド・Pages公開が順に実行されます。Actionsの **Deploy to GitHub Pages → Run workflow** からの手動実行も可能です。文書だけの変更では自動公開しません。
+3. 公開後、トップ、CSS、アイコン、ページ内リンクを確認します。ブランド詳細ページと正式素材は後続workの対象です。
+
+ActionsはPagesの設定から `SITE_URL`（origin）と `SITE_BASE`（base_path）を取得してAstroに渡します。ownerやリポジトリ名を変更した場合も公開設定に追従します。ローカルでは環境変数を未設定にすれば `/` で動作します。
+
+公開パスをローカルで再現する場合:
+
+```powershell
+$env:SITE_URL = 'https://onidora.github.io'
+$env:SITE_BASE = '/onidora-homepage'
+npm run build
+npm run preview
+# 表示URL: http://localhost:4321/onidora-homepage/
+```
+
+通常のローカル開発に戻す際は、そのPowerShellを終了するか `Remove-Item Env:SITE_URL, Env:SITE_BASE` を実行します。公開するのは `dist/` のみで、README・計画・リポジトリ全体を配信する構成ではありません。
 
 ## 参考
 
