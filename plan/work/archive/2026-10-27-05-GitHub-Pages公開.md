@@ -45,3 +45,6 @@ plan/README.md                修正: 02〜04より先行するテスト公開�
 - 2026-10-30: privateのPages作成APIが「Your current plan does not support GitHub Pages for this repository.」でHTTP 422を返した。ユーザーから「だとしたら公開にしたいな」とpublic化の承認を受領。
 - 2026-10-30: checkはエラー・警告・ヒント0。通常パスと/onidora-homepageのビルド成功。サブパスのローカルブラウザでCSS、アイコン、トップへの戻り、制作ブランドへのEnter移動を確認。ブラウザ警告・エラー0。
 - 2026-10-30: リポジトリをPUBLICへ変更してAPIで確認。Pagesをworkflow方式・HTTPS有効で作成し、公開URL https://onidora.github.io/onidora-homepage/ を取得。ローカルのHTML・CSS・SVGはHTTP 200、文書の相対リンク切れなし。
+- 2026-10-30: 公開設定をfe62674でmainへpush。初回Actions実行41010025915はbuild/deployとも成功（https://github.com/onidora/onidora-homepage/actions/runs/41010025915）。通常・公開パス両方のローカルビルドに加え、CIのcheck/buildも成功。
+- 2026-10-30: 公開URLでHTML・CSS・SVGのHTTP 200を確認。公開ページをブラウザで開き、アイコン読み込み、制作ブランドへのEnter移動、トップへ戻るリンクを確認。スクリーンショットを保存。初回テスト公開の完了条件を満たしarchiveへ移動する。
+- 2026-10-30: Actionsに公式依存のNode 20廃止予告とubuntu-latest移行の注記あり。実行はNode 24へ強制され成功しているため、本公開の阻害要因ではない。コンテンツの残作業は02〜04へ継続。

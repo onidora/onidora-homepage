@@ -44,7 +44,7 @@ npm run preview
 
 ## GitHub Pagesへの公開
 
-トップ1ページをテスト公開するため、`.github/workflows/deploy.yml` を用意しています。公開予定URLは `https://onidora.github.io/onidora-homepage/`。初回公開の結果は [05-GitHub-Pages公開](plan/work/2026-10-27-05-GitHub-Pages公開.md) の実施記録に残します。
+トップ1ページをテスト公開しています。[おにどら | WORKS](https://onidora.github.io/onidora-homepage/)（2026-10-30初回公開）。`.github/workflows/deploy.yml` で検証・ビルド・公開を行います。初回公開の結果は [05-GitHub-Pages公開](plan/work/archive/2026-10-27-05-GitHub-Pages公開.md) の実施記録に記載しています。
 
 1. GitHubのSettings → PagesでSourceを **GitHub Actions** に設定します。現在のアカウントはprivateリポジトリからのPages公開が利用できないため、publicリポジトリから一般公開する構成です。
 2. `main` へサイトのソースや公開設定をpushすると、型チェック・ビルド・Pages公開が順に実行されます。Actionsの **Deploy to GitHub Pages → Run workflow** からの手動実行も可能です。文書だけの変更では自動公開しません。
